@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
 
-  loadHTML("#hero", "partials/hero.html", () => {
+  loadHTML("#hero", "index.html", () => {
     const title = document.getElementById("animated-title");
 
     if (title) {
@@ -62,12 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Елемент з id "subtitle" не знайдено');
     }
   });
-
-  loadHTML("#header", "partials/header.html");
-  loadHTML("#about-us", "partials/about-us.html");
-  loadHTML("#our-services", "partials/our-services.html");
-  loadHTML("#reviews", "partials/reviews.html");
-  loadHTML("#footer-container", "partials/footer.html");
 
 function closeMenu() {
   document.getElementById('menu-toggle').checked = false;

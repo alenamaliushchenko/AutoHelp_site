@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta 
-      name="description"
-      content="AutoHelp - мобільний шиномонтаж у Львові. Швидка заміна шин, ремонт на дорозі, обробка неприємних запахів сухим туманом, комп'ютерна діагностика автомобіля. Мобільний сервіс для вашого авто у будь-якому місці Львова." />
-    <meta name="keywords" content="мобільний шиномонтаж, AutoHelp, послуги шиномонтажу, Львів" />
+    <meta name="description" 
+    content="AutoHelp – мобільний шиномонтаж у Львові: ремонт, балансування, заміна шин, 
+    сухий туман, комп'ютерна діагностика. Виїзд до клієнта." />
+
     <meta name="author" content="AutoHelp Team" />
     <meta name="robots" content="index, follow" />
-    <title>Мобільний шиномонтаж AutoHelp - Замовити послугу у Львові</title>
+    <meta property="og:title" content="Мобільний шиномонтаж у Львові – AutoHelp | Виїзний сервіс 24/7" />
+    <meta property="og:description" content="AutoHelp – мобільний шиномонтаж у Львові: ремонт, балансування, заміна шин, сухий туман, комп'ютерна діагностика. Виїзд до клієнта." />
+    <meta property="og:image" content="https://autohelp.site/img/AutoHelp_image.png" />
+    <meta property="og:url" content="https://autohelp.site/" />
+    <meta property="og:type" content="website" />
+
+    <title>Мобільний шиномонтаж у Львові – AutoHelp | Виїзний сервіс 24/7</title>
 
      
     <link rel="shortcut icon" href="./img/AutoHelp_without_slogan.svg" type="image/svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" crossorigin="anonymous" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://autohelp.site/">
@@ -24,23 +30,304 @@
 
     
     <link rel="stylesheet" href="./css/styles.css">
-    
-    
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/hero.css">
-    <link rel="stylesheet" href="./css/about-us.css">
-    <link rel="stylesheet" href="./css/our-services.css">
-    <link rel="stylesheet" href="./css/footer.css">
+
 
   </head>
  
   <body>
-    <div id="header"></div>
-    <div id="hero"></div>
-    <div id="about-us"></div>
-    <div id="our-services"></div>
-    <div id="reviews"></div>
-    <div id="footer-container"></div>
+    <header class="header" id="header">
+      <div class="header-container container">
+        <nav class="header-nav">
+          <a href="#index.html" class="header-logo">
+            <img class="header-logo-img" src="./img/AutoHelp_without_slogan.svg" alt="Site logo" width="40" height="40">
+              <span class="logo-name">AutoHelp</span>
+          </a> 
+          <ul class="header-list">
+            <li class="header-item">
+              <a class="header-link" href="#about-us">
+                Про нас
+              </a>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="#services">
+                Наші послуги
+              </a>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="#reviews">
+              Відгуки
+              </a>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="#footer">
+              Контакти
+              </a>
+            </li>
+          </ul>
+          <div class="menu-container">
+            <input id="menu-toggle" class="menu-checkbox" type="checkbox" />
+              <label for="menu-toggle" class="menu-icon" aria-label="Toggle menu">
+                <span class="menu-checkbox-line"></span>
+                <span class="menu-checkbox-line"></span>
+                <span class="menu-checkbox-line"></span>
+              </label>  
+            <ul class="mobile-menu-list">
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="#about-us" onclick="closeMenu()">Про нас</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="#services" onclick="closeMenu()">Наші послуги</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="#reviews" onclick="closeMenu()">Відгуки</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu-link" href="#footer" onclick="closeMenu()">Контакти</a>
+              </li>
+              <li class="mobile-contact-item">
+                <a href="tel:+380632773766" class="contact-phone">
+                  <svg class="icon-phone-call" width="22px" height="22px">
+                    <use href="./img/sprite.svg#icon-phone"></use>
+                  </svg>
+                  +380632773766
+                </a>
+              </li>
+              <li class="mobile-social-item">
+                <a
+                  class="mobile-social-link"
+                  href="https://www.instagram.com/lviv_auto_help/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit our Instagram page"
+                  title="Visit our Instagram"
+                >
+                Слідкуйте за нами
+                  <svg class="mobile-social-icon" width="22px" height="22px">
+                    <use href="./img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul> 
+          </div>  
+        </nav>
+      </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section section">
+          <div class="container">
+              <h2 id="animated-title">AutoHelp</h2>
+              <h1 id="subtitle">Мобільний шиномонтаж</h1>
+            
+              <a href="tel:+380632773766">
+              <button class="hero-btn">Зателефонувати нам!</button>
+              </a>
+          </div>
+        </section>
+    
+        <section id="about-us" class="about-us-section section">
+          <div class="container">
+            <h2 class="about-us-title">Про нас</h2>
+            <div class="about-us">
+              <article class="about-us-desc">
+                <p class="description">
+                Ласкаво просимо до AutoHelp — мобільного шиномонтажу, створеного ветеранами.
+                Наша мета — забезпечити вашу безпеку на дорозі, надаючи якісні послуги на місці.
+                Ми використовуємо найкращі матеріали та обладнання, щоб ви почувалися впевнено.
+                Від ремонту до заміни шин — все виконується з увагою до деталей і професіоналізмом наших фахівців. 
+                Оберіть AutoHelp для вашого комфорту та безпеки.
+                </p>
+              </article>
+              <article class="why-we">
+                <h3 class="about-us-subtitle">Чому саме ми?</h3>
+                <ul class="about-us-list">
+                  <li class="about-us-item">
+                    <h5 class="advantage">Ми Приїдемо до Вас</h5>
+                    <p class="about-the-advantage">Не потрібно їхати в сервіс - ми надаємо професійні послуги у вашому місці</p>
+                  </li>
+                  <li class="about-us-item">
+                    <h5 class="advantage">Швидка Відповідь</h5>
+                    <p class="about-the-advantage">Доступний сервіс того ж дня для екстрених замін шин</p>
+                  </li>
+                  <li class="about-us-item">
+                    <h5 class="advantage">Досвідчені Техніки</h5>
+                    <p class="about-the-advantage">Повністю кваліфіковані професіонали з багаторічним досвідом</p>
+                  </li>
+                </ul>
+              </article>  
+            </div>
+          </div>
+        </section>
+   
+        <section class="our-services section" id="services">
+          <div class="container">
+            <h2 class="our-services-title">Наші послуги</h2>
+            <ul class="our-services-list">
+              <li class="our-services-item">
+                <div class="our-services-box">
+                  <img
+                    class="our-services-pic"
+                    src="./img/mobilni_shunomontaz.jpg"
+                    alt="Мобільний шиномонтаж у Львові"
+                    width="360" 
+                    height="250"
+                  />
+                  <p class="service-description-overlay">
+                    Зручна послуга, яка дозволяє отримати професійний шиномонтаж прямо на місці. Наша команда фахівців швидко та ефективно виконає всі необхідні роботи, без потреби виїжджати до сервісу чи чекати в черзі. Просто зателефонуйте, і ми прибудемо, щоб вирішити всі ваші потреби.
+                  </p>
+                </div>
+                <div class="our-services-about"> 
+                  <h3 class="service-title">Мобільний шиномонтаж</h3>
+                  
+                </div>
+              </li>
+              <li class="our-services-item">
+                <div class="our-services-box">
+                  <img 
+                    class="service-pic"   
+                    src="./img/syhii_tuman.jpeg" 
+                    alt="Послуга оброблення сухого туману"
+                    width="360"
+                    height="250">   
+                  <p class="service-description-overlay">
+                    Інноваційний метод очищення та дезінфекції автомобілів і приміщень за допомогою сухого туману. Ефективно усуває бактерії, віруси, алергени та неприємні запахи. Автомобіль або приміщення залишається свіжим, безпечним та приємно ароматизованим, забезпечуючи комфорт і здоров'я для вас та вашої родини.
+                  </p>            
+                </div>
+                <div class="our-services-about">
+                  <h3 class="service-title">Послуга оброблення сухого туману</h3>
+                </div>
+              </li>
+              <li class="our-services-item">
+                <div class="our-services-box">
+                  <img
+                    class="our-services-pic" 
+                    src="./img/zapusk_akb.jpg" 
+                    alt="Запуск АКБ"
+                    width="360"
+                    height="250">
+                  <p class="service-description-overlay">
+                    Це послуга, яка дозволяє швидко відновити роботу акумуляторної батареї вашого автомобіля в разі її розрядження. Фахівці використовують професійне обладнання для безпечного запуску двигуна без ризику пошкодження електроніки.
+                  </p>
+                </div>
+                <div class="our-services-about">
+                  <h3 class="service-title">Запуск АКБ</h3>
+                </div>
+              </li>
+              <li class="our-services-item">
+                <div class="our-services-box">
+                  <img
+                    class="our-services-pic" 
+                    src="./img/pidviz_oil.jpg" 
+                    alt="Підвіз пального"
+                    width="360"
+                    height="250"> 
+                  <p class="service-description-overlay">
+                    Ми доставимо пальне прямо на місце швидко, надійно і зручно. Не турбуйтеся про рівень пального чи стан акумулятора — наша команда готова допомогти в будь-який час. Довіртеся нам, і ми зробимо вашу подорож безпечною та комфортною!
+                  </p>
+                </div>
+                <div class="our-services-about">
+                  <h3 class="service-title">Підвіз пального</h3>
+                </div>
+              </li>
+              <li class="our-services-item">
+                <div class="our-services-box">
+                  <img
+                    class="our-services-pic" 
+                    src="./img/comp_diagnostic.jpg" 
+                    alt="Kомпьютерна діагностика автомобіля"
+                    width="360"
+                    height="250">
+                  <p class="service-description-overlay">
+                    Отримайте точну діагностику вашого автомобіля за допомогою нашої комп'ютерної системи. Кваліфіковані техніки виявлять проблеми з електронікою, двигуном, трансмісією та іншими системами. Довіртеся нашій команді для надійності та безпеки вашої поїздки!
+                  </p>
+                </div>
+                <div class="our-services-about">
+                  <h3 class="service-title">Kомпьютерна діагностика автомобіля</h3>
+                </div>
+              </li>
+              <li class="our-services-item">
+                <div class="our-services-box">
+                  <img
+                    class="our-services-pic" 
+                    src="./img/zberiganja_shun.jpg" 
+                    alt="Зберігання шин"
+                    width="360"
+                    height="250">
+                  <p class="service-description-overlay">
+                    Правильне зберігання шин — важлива частина догляду за автомобілем. Забезпечте чистоту, сухе місце, уникайте прямих сонячних променів, підтримуйте стабільну температуру і регулярно перевіряйте стан шин.
+                  </p>  
+                </div>
+                <div class="our-services-about">
+                  <h3 class="service-title">Зберігання шин</h3>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="reviews" id="reviews" style="background: linear-gradient(180deg, #222, #444);">
+          <div class="container">
+            <h2 class="reviews-title" style="color: white; font-size: 32px; text-align: center; padding-top: 48px; margin-bottom: 30px;">Відгуки</h2>
+            <div class="elfsight-app-27600f96-6b53-443c-9ca0-ed83509653aa" data-elfsight-app-lazy></div>
+          </div>
+        </section>
+     
+    </main>    
+    
+
+    <footer id="footer">
+      <div class="container footer-container">
+        <div class="footer-title-about">
+          <a href="#header" class="footer-title-link">
+            <h2 class="footer-title">
+            AutoHelp <br /><span class="footer-subtitle">мобільний шиномонтаж</span>
+            </h2>
+            <p class="footer-slogan">
+          Від ремонту до заміни шин — все виконується з увагою до деталей і
+          професіоналізмом наших фахівців.
+            </p>
+          </a>
+        </div>
+
+        <div class="footer-contact">
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <a href="tel:+380632773766" class="contact-phone">
+                <svg class="icon-phone-call" width="22px" height="22px">
+                  <use href="./img/sprite.svg#icon-phone"></use>
+                </svg>
+                +380632773766
+              </a>
+            </li>
+            <li class="footer-contact-item">
+              <a
+                class="social-link"
+                href="https://www.instagram.com/lviv_auto_help/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our Instagram page"
+                title="Visit our Instagram"
+              >
+              Слідкуйте за нами
+                <svg class="footer-social-icon" width="22px" height="22px">
+                  <use href="./img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+          <div class="location">
+            <p>Україна, м.Львів</p>
+            <svg class="icon-location" width="22" height="22">
+              <use href="./img/sprite.svg#icon-location"></use>
+            </svg>
+            
+          </div>
+          <p class="copy-writes">© 2025 AutoHelp. Усі права захищено.</p>
+        </div>
+      </div>
+    </footer>
+    
    
     <script type="module" src="./script.js" defer></script>
     
