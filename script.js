@@ -41,21 +41,31 @@ const loadHTML = (selector, url, callback) => {
     })
     .catch(console.error);
 }
-
 // 3. Закриття меню при скролінгу
-function closeMenu (){
-  document.getElementById('menu-toggle').checked = false;
+function closeMenu() {
+  const menuToggle = document.getElementById('menu-toggle');
+  if (menuToggle) {
+    menuToggle.checked = false; // Знімаємо прапорець для закриття меню
+  }
+  const menu = document.getElementById('menu');
+  if (menu) {
+    menu.classList.remove('open'); // Закриваємо меню
+    menu.classList.add('closed'); // Додаємо клас, щоб показати, що меню закрите
+  }
 }
-window.addEventListener('scroll', function(){
-  if(this.window.scrollY > 0) {
-    closeMenu();
+// Додаємо подію для закриття меню при скролінгу
+window.addEventListener('scroll', function() {
+  if (this.window.scrollY > 0) {
+    closeMenu();  // Закриваємо меню, коли є скрол
   }
 });
 
 // 4. Закриття меню при натисканні на посилання в мобільному меню
 const menuLinks = document.querySelectorAll('.mobile-menu-link');
 menuLinks.forEach(link => {
-  link.addEventListener('click', closeMenu);  
+  link.addEventListener('click', function() {
+    closeMenu();  // Закриваємо меню при кліку на посилання
+  });
 });
 
 // 5. Прокручування сторінки на верх
