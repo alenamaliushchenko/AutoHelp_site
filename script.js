@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    loadHTML("body", "index.html", initAnimations);
-  }, 0);
+  // Анімація заголовків при завантаженні сторінки
+  animateText(document.getElementById("animated-title"), 200);
+  animateText(document.getElementById("subtitle"), 100);
 });
 
 function animateText(element, delay) {
@@ -30,31 +30,19 @@ function animateText(element, delay) {
   animateNextChar();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    animateText(document.getElementById("animated-title"), 200);
-    animateText(document.getElementById("subtitle"), 100);
-  }, 0);
-});
 const loadHTML = (selector, url, callback) => {
   const container = document.querySelector(selector);
-  const cachedHTML = localStorage.getItem(url);
-
-  if (cachedHTML) {
-    requestAnimationFrame(() => {
-      container.innerHTML = cachedHTML;
-      callback?.();
-    });
-  } else {
-    fetch(url)
-      .then(response => response.ok ? response.text() : Promise.reject("Error"))
-      .then(html => {
-        requestAnimationFrame(() => {
-          container.innerHTML = html.replace(/<script.*script>/, "");
-          localStorage.setItem(url, html);
-          callback?.();
-        });
-      })
-      .catch(console.error);
-  }
+  
+  // Прибираємо кешування, щоб уникнути проблем зі старими даними
+  fetch(url)
+    .then(response => response.ok ? response.text() : Promise.reject("Error"))
+    .then(html => {
+      requestAnimationFrame(() => {
+        container.innerHTML = html.replace(/<script.*?<\/script>/gs, ""); // Фікс для видалення всіх скриптів
+        callback?.();
+      });
+    })
+    .catch(console.error);
 };
+
+
