@@ -552,6 +552,10 @@ button {
 /* footer */
 #footer {
   position: relative;
+<<<<<<< HEAD
+=======
+  margin-top: -115px;
+>>>>>>> 6f4b0017a7db70c1647bf2c0cbea6263dcd8a30a
   z-index: 10;
   background-color: rgba(21, 19, 19, 1);
   color: white;
