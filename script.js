@@ -1,10 +1,23 @@
  // Перевіряємо, чи екрани високої роздільної здатності (2x)
  document.addEventListener("DOMContentLoaded", function() {
-  if (window.devicePixelRatio > 1) {
-    document.querySelector('.hero-section').style.backgroundImage = "url('./img/AutoHelp_image-2x.webp')";
-  }
-});
+    if (window.devicePixelRatio > 1) {
+      document.querySelector('.hero-section').style.backgroundImage = "url('./img/AutoHelp_image-2x.webp')";
+    }
+  });
+window.addEventListener('load', function() {
+  var script = document.createElement('script');
+  script.src = "https://www.googletagmanager.com/gtag/js?id=AW-16689675680";
+  script.defer = true;
+  document.head.appendChild(script);
 
+  script.onload = function() {
+    // ініціалізація gtag після того, як скрипт завантажився
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-16689675680');
+  };
+});
 // Анімація тексту
 document.addEventListener('DOMContentLoaded', () => {
   animateText(document.getElementById("animated-title"), 200);
