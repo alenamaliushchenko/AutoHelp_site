@@ -37,19 +37,6 @@ function animateText(element, delay) {
 animateNextChar();
 }
 
-// 2. Завантаження HTML-контенту з іншого файлу
-// const loadHTML = (selector, url, callback) => {
-//   const container = document.querySelector(selector);
-//   fetch(url)
-//     .then(response => response.ok ? response.text() : Promise.reject("Error"))
-//     .then(html => {
-//       requestAnimationFrame(() => {
-//         container.innerHTML = html.replace(/<script.*?<\/script>/gs, ""); // Видаляємо скрипти
-//         callback?.();
-//       });
-//     })
-//     .catch(console.error);
-// }
 // 2. Закриття меню при скролінгу
 function closeMenu() {
   const menuToggle = document.getElementById('menu-toggle');
