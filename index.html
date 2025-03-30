@@ -33,14 +33,7 @@
     <link rel="stylesheet" href="./css/styles.css?v=1.0">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16689675680">
-    </script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-16689675680');
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16689675680" defer>
     </script>
     
   </head>
@@ -125,7 +118,7 @@
     </header>
 
     <main>
-        <section id="hero" class="hero-section section" style="background-image: url('/img/AutoHelp_image.webp');">
+        <section id="hero" class="hero-section section">
 
           <div class="container">
               <h2 id="animated-title">AutoHelp</h2>
@@ -198,7 +191,8 @@
                     src="./img/syhii_tuman.webp" 
                     alt="Послуга оброблення сухого туману"
                     width="360"
-                    height="250">   
+                    height="250"
+                    loading="lazy">   
                   <p class="service-description-overlay">
                     Інноваційний метод очищення та дезінфекції автомобілів і приміщень за допомогою сухого туману. Ефективно усуває бактерії, віруси, алергени та неприємні запахи. Автомобіль або приміщення залишається свіжим, безпечним та приємно ароматизованим, забезпечуючи комфорт і здоров'я для вас та вашої родини.
                   </p>            
@@ -214,7 +208,8 @@
                     src="./img/zapusk_akb.webp" 
                     alt="Запуск АКБ"
                     width="360"
-                    height="250">
+                    height="250" 
+                    loading="lazy">
                   <p class="service-description-overlay">
                     Це послуга, яка дозволяє швидко відновити роботу акумуляторної батареї вашого автомобіля в разі її розрядження. Фахівці використовують професійне обладнання для безпечного запуску двигуна без ризику пошкодження електроніки.
                   </p>
@@ -230,7 +225,8 @@
                     src="./img/pidviz_oil.webp" 
                     alt="Підвіз пального"
                     width="360"
-                    height="250"> 
+                    height="250"
+                    loading="lazy"> 
                   <p class="service-description-overlay">
                     Ми доставимо пальне прямо на місце швидко, надійно і зручно. Не турбуйтеся про рівень пального чи стан акумулятора — наша команда готова допомогти в будь-який час. Довіртеся нам, і ми зробимо вашу подорож безпечною та комфортною!
                   </p>
@@ -246,7 +242,8 @@
                     src="./img/comp_diagnostic.webp" 
                     alt="Kомпьютерна діагностика автомобіля"
                     width="360"
-                    height="250">
+                    height="250"
+                    loading="lazy">
                   <p class="service-description-overlay">
                     Отримайте точну діагностику вашого автомобіля за допомогою нашої комп'ютерної системи. Кваліфіковані техніки виявлять проблеми з електронікою, двигуном, трансмісією та іншими системами. Довіртеся нашій команді для надійності та безпеки вашої поїздки!
                   </p>
@@ -262,7 +259,8 @@
                     src="./img/zberiganja_shun.webp" 
                     alt="Зберігання шин"
                     width="360"
-                    height="250">
+                    height="250" 
+                    loading="lazy">
                   <p class="service-description-overlay">
                     Правильне зберігання шин — важлива частина догляду за автомобілем. Забезпечте чистоту, сухе місце, уникайте прямих сонячних променів, підтримуйте стабільну температуру і регулярно перевіряйте стан шин.
                   </p>  
@@ -338,6 +336,14 @@
     </footer>
 
     <script type="module" src="./script.js?v=1.0"></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16689675680');
+    </script>
 
   </body>
 </html>
