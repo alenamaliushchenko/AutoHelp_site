@@ -1,13 +1,11 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const script = document.createElement('script');
-  script.src = "script.js";  
-  script.type = "module";  
-  
-  document.head.appendChild(script);
+ // Перевіряємо, чи екрани високої роздільної здатності (2x)
+ document.addEventListener("DOMContentLoaded", function() {
+  if (window.devicePixelRatio > 1) {
+    document.querySelector('.hero-section').style.backgroundImage = "url('./img/AutoHelp_image-2x.webp')";
+  }
 });
 
-
-// 1. Анімація тексту
+// Анімація тексту
 document.addEventListener('DOMContentLoaded', () => {
   animateText(document.getElementById("animated-title"), 200);
   animateText(document.getElementById("subtitle"), 100);
@@ -37,7 +35,7 @@ function animateText(element, delay) {
 animateNextChar();
 }
 
-// 2. Закриття меню при скролінгу
+// Закриття меню при скролінгу
 function closeMenu() {
   const menuToggle = document.getElementById('menu-toggle');
   if (menuToggle) {
@@ -56,7 +54,7 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// 3. Закриття меню при натисканні на посилання в мобільному меню
+// Закриття меню при натисканні на посилання в мобільному меню
 const menuLinks = document.querySelectorAll('.mobile-menu-link');
 menuLinks.forEach(link => {
   link.addEventListener('click', function() {
@@ -64,7 +62,7 @@ menuLinks.forEach(link => {
   });
 });
 
-// 4. Прокручування сторінки на верх
+// Прокручування сторінки на верх
 function scrollToTop() {
   window.scrollTo({
     top: 0,
@@ -74,7 +72,7 @@ function scrollToTop() {
 
 window.addEventListener('load', () => setTimeout(scrollToTop, 0));
 
-// 5. Обробник кліку по логотипу: перезавантаження + прокрутка
+// Обробник кліку по логотипу: перезавантаження + прокрутка
 const logo = document.querySelector('#logo');
 logo.addEventListener('click', function (event) {
   scrollToTop();
@@ -83,4 +81,5 @@ logo.addEventListener('click', function (event) {
     location.reload(); 
   }, 200);
 });
+
 
