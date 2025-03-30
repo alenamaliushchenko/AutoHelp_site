@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const script = document.createElement('script');
+  script.src = "script.js";  
+  script.type = "module";  
+  
+  document.head.appendChild(script);
+});
+
+
 // 1. Анімація тексту
 document.addEventListener('DOMContentLoaded', () => {
   animateText(document.getElementById("animated-title"), 200);
@@ -29,46 +38,46 @@ animateNextChar();
 }
 
 // 2. Завантаження HTML-контенту з іншого файлу
-const loadHTML = (selector, url, callback) => {
-  const container = document.querySelector(selector);
-  fetch(url)
-    .then(response => response.ok ? response.text() : Promise.reject("Error"))
-    .then(html => {
-      requestAnimationFrame(() => {
-        container.innerHTML = html.replace(/<script.*?<\/script>/gs, ""); // Видаляємо скрипти
-        callback?.();
-      });
-    })
-    .catch(console.error);
-}
-// 3. Закриття меню при скролінгу
+// const loadHTML = (selector, url, callback) => {
+//   const container = document.querySelector(selector);
+//   fetch(url)
+//     .then(response => response.ok ? response.text() : Promise.reject("Error"))
+//     .then(html => {
+//       requestAnimationFrame(() => {
+//         container.innerHTML = html.replace(/<script.*?<\/script>/gs, ""); // Видаляємо скрипти
+//         callback?.();
+//       });
+//     })
+//     .catch(console.error);
+// }
+// 2. Закриття меню при скролінгу
 function closeMenu() {
   const menuToggle = document.getElementById('menu-toggle');
   if (menuToggle) {
-    menuToggle.checked = false; // Знімаємо прапорець для закриття меню
+    menuToggle.checked = false; 
   }
   const menu = document.getElementById('menu');
   if (menu) {
-    menu.classList.remove('open'); // Закриваємо меню
-    menu.classList.add('closed'); // Додаємо клас, щоб показати, що меню закрите
+    menu.classList.remove('open'); 
+    menu.classList.add('closed'); 
   }
 }
-// Додаємо подію для закриття меню при скролінгу
+
 window.addEventListener('scroll', function() {
   if (this.window.scrollY > 0) {
-    closeMenu();  // Закриваємо меню, коли є скрол
+    closeMenu();  
   }
 });
 
-// 4. Закриття меню при натисканні на посилання в мобільному меню
+// 3. Закриття меню при натисканні на посилання в мобільному меню
 const menuLinks = document.querySelectorAll('.mobile-menu-link');
 menuLinks.forEach(link => {
   link.addEventListener('click', function() {
-    closeMenu();  // Закриваємо меню при кліку на посилання
+    closeMenu();  
   });
 });
 
-// 5. Прокручування сторінки на верх
+// 4. Прокручування сторінки на верх
 function scrollToTop() {
   window.scrollTo({
     top: 0,
@@ -78,13 +87,13 @@ function scrollToTop() {
 
 window.addEventListener('load', () => setTimeout(scrollToTop, 0));
 
-// 6. Обробник кліку по логотипу: перезавантаження + прокрутка
+// 5. Обробник кліку по логотипу: перезавантаження + прокрутка
 const logo = document.querySelector('#logo');
 logo.addEventListener('click', function (event) {
   scrollToTop();
   
   setTimeout(() => {
     location.reload(); 
-  }, 500);
+  }, 200);
 });
 
