@@ -284,22 +284,30 @@ button {
 
 /* hero section */
 .hero-section {
-  background-image: url("../img/AutoHelp_image-1x.webp");
+  /* background-image: url("../img/AutoHelp_image-1x.webp"); */
   background-position:  center; 
   background-repeat: no-repeat; 
   background-size: cover;
-  background-attachment: scroll;
   width: 100%;
   height: 100vh;
   margin: 0;
   position: relative; 
 }
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Фонове зображення для 2x екранів */
-@media (min-resolution: 192dpi) {
+/* @media (min-resolution: 192dpi) {
   .hero-section {
     background-image: url("../img/AutoHelp_image-2x.webp");
   }
-}
+} */
 
 /* Фонове зображення для 3x екранів  */
 /* @media only screen and (min-resolution: 288dpi) {
