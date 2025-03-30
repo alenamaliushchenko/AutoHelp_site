@@ -295,7 +295,7 @@ button {
   position: relative; 
 }
 /* Фонове зображення для 2x екранів */
-@media only screen and (min-resolution: 192dpi) {
+@media (min-resolution: 192dpi) {
   .hero-section {
     background-image: url("../img/AutoHelp_image-2x.webp");
   }
