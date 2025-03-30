@@ -284,8 +284,8 @@ button {
 
 /* hero section */
 .hero-section {
-  background-image: url("../img/AutoHelp_image.webp");
-  background-position:  center center; 
+  background-image: url("../img/AutoHelp_image-1x.webp");
+  background-position:  center; 
   background-repeat: no-repeat; 
   background-size: cover;
   background-attachment: scroll;
@@ -294,6 +294,19 @@ button {
   margin: 0;
   position: relative; 
 }
+/* Фонове зображення для 2x екранів */
+@media only screen and (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: url("../img/AutoHelp_image-2x.webp");
+  }
+}
+
+/* Фонове зображення для 3x екранів  */
+/* @media only screen and (min-resolution: 288dpi) {
+  .hero-section {
+    background-image: url("../img/AutoHelp_image-3x.webp");
+  }
+} */
 .hero-section::before {
   content: "";
   position: absolute;
