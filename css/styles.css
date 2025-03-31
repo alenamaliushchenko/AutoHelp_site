@@ -506,11 +506,11 @@ button {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .our-services-box:hover .service-description-overlay {
-  transform: translateY(0%);
+  transform: translateY(0%) scale(1.1);
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   transform: scale(1.1);
-  box-shadow:rgba(0, 255, 255, 0.5);
+  box-shadow:0 4px 8px rgba(0, 255, 255, 0.5);
 }
 .service-description-overlay {
   font-size: 14px;
