@@ -39,7 +39,6 @@ function animateText(element, delay) {
       requestAnimationFrame(() => {
         span.style.opacity = "1";
         span.style.transform = "translateY(0)";
-        ;
       });
 
       index++;

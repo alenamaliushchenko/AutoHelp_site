@@ -284,7 +284,7 @@ button {
 
 /* hero section */
 .hero-section {
-  /* background-image: url("../img/AutoHelp_image-1x.webp"); */
+  background-image: url("../img/AutoHelp_image-1x.webp");
   background-position:  center; 
   background-repeat: no-repeat; 
   background-size: cover;
