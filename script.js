@@ -1,78 +1,70 @@
- // Перевіряємо, чи екрани високої роздільної здатності (2x)
- document.addEventListener("DOMContentLoaded", function() {
-    if (window.devicePixelRatio > 1) {
-      document.querySelector('.hero-section').style.backgroundImage = "url('./img/AutoHelp_image-2x.webp')";
-    }
-  });
 window.addEventListener('load', function() {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag; // зробити доступним глобально
+
   var script = document.createElement('script');
   script.src = "https://www.googletagmanager.com/gtag/js?id=AW-16689675680";
-  script.defer = true;
   document.head.appendChild(script);
 
   script.onload = function() {
-    // ініціалізація gtag після того, як скрипт завантажився
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-16689675680');
   };
 });
-// Анімація тексту
-document.addEventListener('DOMContentLoaded', () => {
-  animateText(document.getElementById("animated-title"), 200);
-  animateText(document.getElementById("subtitle"), 100);
-});
-function animateText(element, delay) {
-  if(!element) return;
 
-  const text = element.innerText;
-  element.innerText = "";
-  let index = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  function animateText(id, delay) {
+    const element = document.getElementById(id);
+    if (!element) return;
 
-  function animateNextChar() {
-    if (index < text.length) {
-      const span = document.createElement('span');
-      span.innerText = text[index] === ' ' ? '\u00A0' : text[index];
+    const text = element.dataset.text || element.innerText;
+    element.innerHTML = ""; 
+
+    [...text].forEach((char, index) => {
+      const span = document.createElement("span");
+      span.innerText = char === " " ? "\u00A0" : char;
+      span.style.opacity = "0";
+      span.style.transform = "translateY(20px)";
+      span.style.display = "inline-block";
+      span.style.transition = "opacity 0.5s ease, transform 0.5s ease";
       element.appendChild(span);
 
-      requestAnimationFrame(() => {
+      setTimeout(() => {
         span.style.opacity = "1";
         span.style.transform = "translateY(0)";
-      });
+      }, delay * index);
+    });
+  }
 
-      index++;
-      setTimeout(animateNextChar, delay);
-    }
-}
-animateNextChar();
-}
+  animateText("animated-title", 200);
+  animateText("subtitle", 150);
+});
 
 // Закриття меню при скролінгу
 function closeMenu() {
   const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
   if (menuToggle) {
     menuToggle.checked = false; 
   }
-  const menu = document.getElementById('menu');
+  
   if (menu) {
     menu.classList.remove('open'); 
     menu.classList.add('closed'); 
   }
 }
 
-window.addEventListener('scroll', function() {
-  if (this.window.scrollY > 0) {
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
     closeMenu();  
   }
 });
 
 // Закриття меню при натисканні на посилання в мобільному меню
-const menuLinks = document.querySelectorAll('.mobile-menu-link');
-menuLinks.forEach(link => {
-  link.addEventListener('click', function() {
-    closeMenu();  
-  });
+document.querySelectorAll('.mobile-menu-link').forEach(link => {
+  link.addEventListener('click', closeMenu);  
 });
 
 // Прокручування сторінки на верх
@@ -82,17 +74,12 @@ function scrollToTop() {
     behavior: 'smooth'
   });
 }
-
 window.addEventListener('load', () => setTimeout(scrollToTop, 0));
 
 // Обробник кліку по логотипу: перезавантаження + прокрутка
 const logo = document.querySelector('#logo');
 logo.addEventListener('click', function (event) {
   scrollToTop();
-  
-  setTimeout(() => {
-    location.reload(); 
-  }, 200);
 });
 
 

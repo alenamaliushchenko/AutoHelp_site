@@ -293,6 +293,13 @@ button {
   margin: 0;
   position: relative; 
 }
+@media 
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: url('../img/AutoHelp_image-2x.webp');
+  }
+}
 
 /* Фонове зображення для 2x екранів */
 /* @media (min-resolution: 192dpi) {
@@ -339,7 +346,7 @@ button {
   display: inline-block;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1s, transform 1s;
+  transition: opacity 1s ease, transform 1s ease;
 }
 .hero-btn {
   position: fixed;
