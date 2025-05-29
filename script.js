@@ -1,6 +1,7 @@
 window.addEventListener('load', function() {
-  var script = document.createElement('script');
+  const script = document.createElement('script');
   script.src = "https://www.googletagmanager.com/gtag/js?id=AW-16689675680";
+  script.async = true;
   document.head.appendChild(script);
 
   script.onload = function() {
@@ -57,10 +58,8 @@ function closeMenu() {
 }
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 0) {
-    closeMenu();  
-  }
-});
+  if (window.scrollY > 0) closeMenu();  
+  });
 
 // Закриття меню при натисканні на посилання в мобільному меню
 document.querySelectorAll('.mobile-menu-link').forEach(link => {
@@ -78,8 +77,9 @@ window.addEventListener('load', () => setTimeout(scrollToTop, 0));
 
 // Обробник кліку по логотипу: перезавантаження + прокрутка
 const logo = document.querySelector('#logo');
-logo.addEventListener('click', function (event) {
-  scrollToTop();
-});
-
-
+if (logo) {
+  logo.addEventListener('click', event => {
+    event.preventDefault();
+    scrollToTop();
+  });
+}

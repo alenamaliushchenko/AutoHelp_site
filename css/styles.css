@@ -61,7 +61,6 @@ button {
     padding-right: 16px;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .section {
     padding-top: 60px;
@@ -74,7 +73,6 @@ button {
 }
 
 /* header */
-
 .header {
   width: 100%; 
   position: sticky;
@@ -281,8 +279,6 @@ button {
     border-bottom: 3px solid rgba(0, 255, 255, 1);
   }
 }  
-
-
 .hero-section {
   background-image: url("../img/AutoHelp_image-1x.webp");
   background-position:  center; 
@@ -293,15 +289,6 @@ button {
   margin: 0;
   position: relative; 
 }
-/* @media 
-  (-webkit-min-device-pixel-ratio: 2), 
-  (min-resolution: 192dpi) {
-  .hero-section {
-    background-image: url('../img/AutoHelp_image-2x.webp');
-  }
-} */
-
-
 .hero-section::before {
   content: "";
   position: absolute;
@@ -416,12 +403,10 @@ button {
   padding: 10px 10px;
   font-size: 20px;
   transition: box-shadow 0.3s, transform 0.3s;
-} 
-
-}
+  } 
+}  
 
 /* about-us */
-
 .about-us-section {
   background: linear-gradient(180deg, #222, #444); 
 }
