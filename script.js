@@ -1,13 +1,13 @@
 window.addEventListener('load', function() {
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  window.gtag = gtag; // зробити доступним глобально
-
   var script = document.createElement('script');
   script.src = "https://www.googletagmanager.com/gtag/js?id=AW-16689675680";
   document.head.appendChild(script);
 
   script.onload = function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+
     gtag('js', new Date());
     gtag('config', 'AW-16689675680');
   };
