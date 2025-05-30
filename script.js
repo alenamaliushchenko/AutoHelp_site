@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  animateText("animated-title", 200);
-  animateText("subtitle", 150);
+  animateText("animated-title", 50);
+  animateText("subtitle", 40);
 });
 
 // Закриття меню при скролінгу
