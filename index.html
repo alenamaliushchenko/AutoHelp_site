@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://autohelp.site/" />
     <meta property="og:type" content="website" />
  
-    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/AutoHelp_favicon.png" type="image/png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"media="print" onload="this.onload=null;this.removeAttribute('media');">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,9 +30,13 @@
     <link rel="stylesheet" href="./css/styles.css?v=1.0">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16689675680">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16689675680"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16689675680');
     </script>
-    
   </head>
  
   <body>
@@ -344,7 +348,11 @@
       </div>
     </footer>
 
-    <script src="./script.js?v=1.0"></script>
+    <!-- <script defer src="./script.js?v=1.0"></script> -->
+
+    <script defer src="./js/animations.js"></script>
+    <script defer src="./js/menu.js"></script> 
+    <script defer src="./js/scroll-to-top.js"></script> 
 
   </body>
 </html>
