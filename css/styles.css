@@ -709,7 +709,7 @@ footer::before {
 }
 
 
-.visually-hidden {
+h3.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
