@@ -35,31 +35,43 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "LocalBusiness",
         "name": "AutoHelp",
+        "image": "https://autohelp.site/img/logo_Autohelp.png",
         "url": "https://autohelp.site",
-        "logo": "https://autohelp.site/img/logo-autohelp-512.png",
+        "telephone": "+380632773766",
+        "priceRange": "$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Львів",
+          "addressRegion": "Львівська область",
+          "addressCountry": "UA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 49.803803,
+          "longitude": 24.000194
+        },
+        "openingHours": "Mo-Su 00:00-23:59",
+        "areaServed": "Львів",
         "sameAs": [
-          "https://www.instagram.com/lviv_auto_help/"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+380632773766",
-          "contactType": "customer service",
-          "areaServed": "UA",
-          "availableLanguage": ["uk"]
-        }
+          "https://www.instagram.com/lviv_auto_help/",
+          "https://www.google.com/maps/place/AutoHelp+мобільний+шиномонтаж/@49.803803,24.000194,17z/data=!3m1!4b1!4m6!3m5!1s0x473ae76c796f68c5:0xa39aae2fd4a189e4!8m2!3d49.803803!4d24.000194!16s%2Fg%2F11lnl_jlwc"
+        ]
       }
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16689675680"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-16689675680');
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AutoHelp",
+      "url": "https://autohelp.site"
+    }
     </script>
+
   </head>
  
   <body>
