@@ -28,7 +28,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="canonical" href="https://autohelp.site/">
 
-    <link rel="preload" href="../img/AutoHelp_image-1x.webp" as="image">
+    <!-- <link rel="preload" href="../img/AutoHelp_image-1x.webp" as="image"> -->
 
     <link rel="stylesheet" href="./css/styles.css?v=1.0">
     <!-- Мікророзмітка JSON-LD -->
@@ -37,7 +37,15 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "AutoHelp",
-        "image": "https://autohelp.site/img/logo_Autohelp.png",
+        "image": [
+          "https://autohelp.site/img/logo_Autohelp.png",
+          "https://autohelp.site/img/mobilni_shunomontaz.webp",
+          "https://autohelp.site/img/comp_diagnostic.webp",
+          "https://autohelp.site/img/zapusk_akb.webp",
+          "https://autohelp.site/img/auto.jpg",
+          "https://autohelp.site/img/our-work-1.jpg",
+          "https://autohelp.site/img/autohelp.jpg"
+        ],
         "url": "https://autohelp.site",
         "telephone": "+380632773766",
         "priceRange": "₴",
@@ -70,7 +78,8 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "AutoHelp",
-      "url": "https://autohelp.site"
+      "url": "https://autohelp.site",
+      "logo": "https://autohelp.site/img/logo_Autohelp.png"
     }
     </script>
 
