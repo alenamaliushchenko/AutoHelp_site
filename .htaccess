@@ -1,3 +1,13 @@
+# Увімкнути модуль переписування URL
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Редірект index.html на корінь сайту
+  RewriteCond %{THE_REQUEST} /index\.html [NC]
+  RewriteRule ^index\.html$ / [R=301,L]
+</IfModule>
+
+# Налаштування кешування
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
